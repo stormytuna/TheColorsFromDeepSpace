@@ -8,6 +8,6 @@ public static class ColorHelpers
 		int r = (hex >> 16) & 0xFF;
 		int g = (hex >> 8) & 0xFF;
 		int b = hex & 0xFF;
-		return new Color(r, g, b, 255);
+		return new Color(r / 255f, g / 255f, b / 255f, 1f);
 	}
 }

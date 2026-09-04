@@ -5,7 +5,9 @@ using UnityEngine;
 
 namespace TCFDS.CustomColorPalettes;
 
-public static class CustomColorPalettes
+/*
+[HarmonyPatch]
+public static class ModCustomColorPalettes
 {
 	private static ColorSet[] AllPalettes = [
 		// Test:
@@ -42,18 +44,39 @@ public static class CustomColorPalettes
 	private static int customPalettesOffset;
 
 	[HarmonyPatch(typeof(ColorManager), nameof(ColorManager.InitialCheck))]
-	[HarmonyPostfix]
+	[HarmonyPrefix]
 	public static void AddCustomColorPalettes(ColorManager __instance) {
 		customPalettesOffset = __instance.colSets.Length;
-		__instance.colSets = __instance.colSets.Concat([]).ToArray();
+		/*
+		__instance.colSets[10].t_btn2 = Color.blue;
+		__instance.colSets[10].t_btn4 = Color.blue;
+		__instance.colSets[10].oh_correct = Color.blue;
+		__instance.colSets[10].oh_incorrect = Color.blue;
+
+
+
+		__instance.colSets[10].oh_correct = Color.blue;
+		__instance.colSets[10].oh_incorrect = Color.blue;
+
+
+		__instance.colSets[10].SetColorTable();
+		__instance.colSets = __instance.colSets.Concat(AllPalettes).ToArray();
 	}
 
-	public static int GetIndexForPalette(CustomPalettes palette) {
+	[HarmonyPatch(typeof(OverheadLight), nameof(OverheadLight.SetColor))]
+	[HarmonyPostfix]
+	public static void Test(OverheadLight __instance, ColorSet cs) {
+		TCFDSPlugin.Logger.LogInfo(cs.oh_correct);
+	}
+
+	public static int GetIndexForPalette(ModCustomPalettes palette) {
 		return customPalettesOffset + (int)palette;
 	}
 }
 
-public enum CustomPalettes
+public enum ModCustomPalettes
 {
+	None = -1,
 	Test = 0,
 }
+*/
