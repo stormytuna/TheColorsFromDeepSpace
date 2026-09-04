@@ -4,6 +4,8 @@ A mod for the game [The Message from Deep Space](https://store.steampowered.com/
 
 **Please complete up until Act 3 before reading further or installing the mod.**
 
+The mod is available on [Thunderstore!](https://thunderstore.io/c/the-message-from-deep-space/p/stormytuna/The_Colors_from_Deep_Space/)
+
 ## Features
 
 All features of this mod are customized via the config file. Load the game with the mod enabled to generate the config file, then edit it to your liking.
